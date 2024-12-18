@@ -22,8 +22,6 @@ This repository contains the source code for the restaurant’s website, which i
 
 ## Website
 
-Explore the **Salt & Stone Steakhouse** website at:  
-[https://www.saltandstone.com](https://www.saltandstone.com)
 
 ## Installation
 
