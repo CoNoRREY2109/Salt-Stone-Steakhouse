@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salt & Stone</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Countdown Timer Styling */
+    .countdown-container {
+      text-align: center;
+      margin: 20px 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    .countdown-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .countdown {
+      font-size: 24px;
+      color: #d9534f;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Service.html">Menu</a></li>
+        <li><a href="contact1.html">Contact</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>About Us</h1>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div class="about-heading">
+      <h1>About Salt & Stone</h1>
+    </div>
+
+    <div class="content">
+      <div class="text-content">
+        <p>Welcome to Salt and Stones, where culinary artistry intertwines seamlessly with an intimate dining experience. Founded on the core principles of simplicity, sustainability, and taste. Our mission is to craft a culinary journey that not only delights the palate but also pays homage to the natural harmony between land and sea. Each dish is thoughtfully prepared to showcase the finest seasonal ingredients, honoring both the environment and the rich culinary traditions that inspire us. At Salt and Stones, we believe that every meal should tell a story—one of passion, purpose, and an unwavering commitment to excellence.Check out our video of our chef preparing some of our classic meals !</p>
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lcU3pruVyUw?si=tYCHBCcVsaFaOYqk" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="centered-content">
+    <h2>Our food</h2>
+    <p>At Salt and Stone, we believe that great food begins with great ingredients. Our menu is crafted with the finest locally-sourced produce, fresh-caught seafood, and ethically-raised meats. Every dish is a tribute to the rich flavors of nature, enhanced by the subtle yet bold seasoning of hand-harvested salts and fragrant herbs.</p>
+      
+      <p>Our space is designed to evoke warmth and connection, whether you're enjoying a casual dinner with friends, celebrating a milestone, or simply savoring a quiet evening with a glass of wine. The Salt and Stones experience is as much about the ambiance as it is about the flavors on your plate. We are committed to sustainability and reducing our environmental impact. From our sourcing practices to the materials we use in our kitchen, we take pride in being a part of the solution for a healthier planet. Thank you for choosing Salt and Stone. We look forward to welcoming you and sharing our passion for exceptional dining.</p>  
+  </div>
+
+  <div class="image-container">
+    <img src="steak.jpg" alt="Image 1">
+    <img src="burger.jpg" alt="Image 2">
+    <img src="cake.jpg" alt="Image 3">
+  </div>
+
+  <section class="events">
+    <div class="event-content">
+      <h2>Events at Salt & Stone</h2>
+        <h2>Host Your Special Events at Salt & Stone</h2>
+      <div class="event-details">
+         <p>At Salt & Stone, we offer the perfect venue for your next event, whether it's a small gathering or a larger celebration. Our warm and inviting atmosphere, combined with our exceptional service, makes us the ideal place to host birthdays, anniversaries, corporate events, or any special occasion. Our team works closely with you to customise every detail, ensuring your event is a memorable experience for you and your guests. Enjoy our signature steaks and a carefully curated menu while celebrating your milestones with us. Contact us today to learn more about booking your next event at Salt & Stone!</p>
+        <img src="event 1.jpg" alt="Event Image" class="event-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown Timer Section -->
+  <div class="countdown-container">
+    <div class="countdown-title">Join us to us to bring in the New Year!:</div>
+    <div id="countdown" class="countdown"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Salt & Stone. All rights reserved.</p>
+  </footer>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    const targetDate = new Date("2024-12-31T23:59:59").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const timeLeft = targetDate - now;
+
+      if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerText =
+          `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        document.getElementById("countdown").innerText = "Our new cocktail menu is here!";
+        clearInterval(countdownInterval);
+      }
+    }
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
